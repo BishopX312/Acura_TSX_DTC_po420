@@ -1,0 +1,116 @@
+PS [ADAPTION] >python .\po420_honda_spec.py
+HONDA/ACURA O2 SENSOR DIAGNOSTIC FOR P0420
+============================================================
+============================================================
+TESTING ALL POSSIBLE O2 SENSOR PIDS
+============================================================
+TESTING STANDARD O2 SENSOR COMMANDS:
+----------------------------------------
+[obd.obd] 'b'0114': O2: Bank 1 - Sensor 1 Voltage' is not supported
+✗ Bank 1 Sensor 1 (Standard): No data
+✓ Bank 1 Sensor 2 (Standard): 0.59 volt
+[obd.obd] 'b'0118': O2: Bank 2 - Sensor 1 Voltage' is not supported
+✗ Bank 2 Sensor 1 (Standard): No data
+[obd.obd] 'b'0119': O2: Bank 2 - Sensor 2 Voltage' is not supported
+✗ Bank 2 Sensor 2 (Standard): No data
+
+TESTING HONDA-SPECIFIC O2 PIDS:
+----------------------------------------
+✗ O2 Bank 1 Sensor 2 (Honda Format): Error - can't concat str to bytes
+✗ O2 Bank 1 Sensor 3 (Honda Format): Error - can't concat str to bytes
+✗ O2 Bank 1 Sensor 4 (Honda Format): Error - can't concat str to bytes
+✗ O2 Bank 2 Sensor 1 (Honda Format): Error - can't concat str to bytes
+✗ O2 Bank 2 Sensor 2 (Honda Format): Error - can't concat str to bytes
+
+============================================================
+TESTING WIDEBAND/AFR SENSORS
+============================================================
+Air-Fuel Ratio Sensors (if equipped):
+----------------------------------------
+✗ AFR Bank 1 Sensor 1: Error - can't concat str to bytes
+✗ AFR Bank 1 Sensor 2: Error - can't concat str to bytes
+✗ AFR Bank 2 Sensor 1: Error - can't concat str to bytes
+✗ AFR Bank 2 Sensor 2: Error - can't concat str to bytes
+
+Found 1 working sensors. Do live monitoring? (y/N): y
+
+============================================================
+LIVE O2 SENSOR MONITORING
+============================================================
+Monitoring working sensors for 30 seconds...
+Engine should be warmed up and running
+Press Ctrl+C to stop early
+------------------------------------------------------------
+
+Time: 0.0s
+  Bank 1 Sensor 2 (Standard)    : 0.59 volt
+
+Time: 2.0s
+  Bank 1 Sensor 2 (Standard)    : 0.59 volt
+
+Time: 4.0s
+  Bank 1 Sensor 2 (Standard)    : 0.595 volt
+
+Time: 6.1s
+  Bank 1 Sensor 2 (Standard)    : 0.195 volt
+
+Time: 8.1s
+  Bank 1 Sensor 2 (Standard)    : 0.62 volt
+
+Time: 10.1s
+  Bank 1 Sensor 2 (Standard)    : 0.42 volt
+
+Time: 12.1s
+  Bank 1 Sensor 2 (Standard)    : 0.565 volt
+
+Time: 14.1s
+  Bank 1 Sensor 2 (Standard)    : 0.52 volt
+
+Time: 16.1s
+  Bank 1 Sensor 2 (Standard)    : 0.135 volt
+
+Time: 18.2s
+  Bank 1 Sensor 2 (Standard)    : 0.63 volt
+
+Time: 20.2s
+  Bank 1 Sensor 2 (Standard)    : 0.625 volt
+
+Time: 22.2s
+  Bank 1 Sensor 2 (Standard)    : 0.625 volt
+
+Time: 24.2s
+  Bank 1 Sensor 2 (Standard)    : 0.625 volt
+
+Time: 26.2s
+  Bank 1 Sensor 2 (Standard)    : 0.53 volt
+
+Time: 28.3s
+  Bank 1 Sensor 2 (Standard)    : 0.56 volt
+
+============================================================
+P0420 ANALYSIS WITHOUT DIRECT O2 SENSOR DATA
+============================================================
+Since we can't read O2 sensor voltages directly, here's what we know:
+
+FUEL TRIM ANALYSIS:
+------------------------------
+Short Term Fuel Trim: 2.34375 percent
+Long Term Fuel Trim:  -2.34375 percent
+✓ FUEL MIXTURE: Excellent - not causing P0420
+
+P0420 DIAGNOSIS WITHOUT O2 SENSOR READINGS:
+--------------------------------------------------
+Since your fuel trims are excellent (-4.7% LTFT, 0% STFT):
+
+✓ Engine mixture is NOT causing P0420
+✓ No vacuum leaks or fuel system issues
+✓ Problem is likely:
+   1. Catalytic converter efficiency loss (most likely)
+   2. Downstream O2 sensor failure
+   3. Exhaust leak between cat and downstream sensor
+
+RECOMMENDED NEXT STEPS:
+1. Clear P0420 code and drive 20+ miles
+2. If code returns quickly = likely bad catalytic converter
+3. Try replacing downstream O2 sensor first (cheaper)
+4. If still P0420 after new sensor = replace catalytic converter

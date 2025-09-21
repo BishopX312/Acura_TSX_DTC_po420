@@ -1,0 +1,16 @@
+P0420 CATALYST DIAGNOSTIC FOR 2009 ACURA TSX
+============================================================
+============================================================
+P0420 CATALYST EFFICIENCY DIAGNOSTIC
+============================================================
+Code: P0420 - Catalyst System Efficiency Below Threshold
+Location: Bank 1 (Cylinder side with #1 cylinder)
+
+WHAT THIS MEANS:
+- Catalytic converter not cleaning exhaust efficiently
+- Downstream O2 sensor detecting insufficient conversion
+- May cause emissions test failure
+- Usually not drivability issue initially
+
+
+Press Enter to continue with live data analysis...

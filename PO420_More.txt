@@ -1,0 +1,93 @@
+Press Enter to continue with live data analysis...
+
+🔥 ENGINE SHOULD BE RUNNING AND WARMED UP FOR ACCURATE READINGS
+Start engine and let warm up for 5+ minutes, then press Enter...
+============================================================
+OXYGEN SENSOR ANALYSIS
+============================================================
+Reading O2 sensor voltages (engine should be warmed up and running):
+------------------------------------------------------------
+[obd.obd] 'b'0114': O2: Bank 1 - Sensor 1 Voltage' is not supported
+Bank 1 Sensor 1 (Upstream/Pre-Cat) : Not available
+Bank 1 Sensor 2 (Downstream/Post-Cat): 0.78 volt
+Bank 1 Sensor 2 (Downstream/Post-Cat): Error - Cannot compare PlainQuantity and <class 'float'>
+[obd.obd] 'b'0118': O2: Bank 2 - Sensor 1 Voltage' is not supported
+Bank 2 Sensor 1 (Upstream)         : Not available
+[obd.obd] 'b'0119': O2: Bank 2 - Sensor 2 Voltage' is not supported
+Bank 2 Sensor 2 (Downstream)       : Not available
+
+IMPORTANT O2 SENSOR NOTES:
+- Upstream sensors should switch rapidly (0.1V - 0.9V)
+- Downstream sensors should be stable (~0.6-0.8V)
+- If downstream follows upstream closely = bad cat
+
+============================================================
+FUEL TRIM ANALYSIS
+============================================================
+Fuel trim values (+ = adding fuel, - = removing fuel):
+------------------------------------------------------------
+Short Term Fuel Trim Bank 1        : -1.5625 percent
+  └─ NORMAL: Within acceptable range
+Long Term Fuel Trim Bank 1         : -3.90625 percent
+  └─ NORMAL: Within acceptable range
+[obd.obd] 'b'0108': Short Term Fuel Trim - Bank 2' is not supported
+[obd.obd] 'b'0109': Long Term Fuel Trim - Bank 2' is not supported
+
+FUEL TRIM INTERPRETATION:
+- Normal range: -10% to +10%
+- High positive: Engine running lean (adding fuel)
+- High negative: Engine running rich (removing fuel)
+- Extreme values can damage catalytic converter
+
+============================================================
+CATALYST TEMPERATURE (if available)
+============================================================
+Catalyst Temperature (CATALYST_TEMP_B1S1): 294.20000000000005 degree_Celsius
+
+============================================================
+P0420 REPAIR RECOMMENDATIONS
+============================================================
+STEP 1: VERIFY THE CODE
+- Clear the code and drive 20-30 miles
+- If it returns immediately = likely bad cat
+- If it takes several drive cycles = possible other causes
+
+STEP 2: CHECK THESE FIRST (cheaper fixes):
+- Downstream O2 sensor (Bank 1, Sensor 2)
+- Exhaust leaks between engine and cat
+- Air filter (dirty filter can affect mixture)
+- Fuel injector cleaning
+
+STEP 3: ADVANCED DIAGNOSTICS:
+- O2 sensor switching test with scanner
+- Catalytic converter efficiency test
+- Check for oil consumption (blue smoke)
+
+STEP 4: IF CAT REPLACEMENT NEEDED:
+- OEM Honda cat: $800-1200 (best longevity)
+- Aftermarket CARB compliant: $300-600
+- Labor: 2-4 hours ($200-400)
+
+⚠️  IMPORTANT FOR 2009 TSX:
+- California emissions (CARB) compliant cat required
+- Some cheap cats will trigger P0420 again quickly
+- Address root cause or new cat will fail too
+
+==================================================
+LIVE DATA
+==================================================
+Reading at 13:57:05
+--------------------------------------------------
+Engine RPM                    : 0.0 revolutions_per_minute
+Vehicle Speed                 : 0.0 kilometer_per_hour
+Throttle Position             : 16.862745098039216 percent
+Engine Load                   : 0.0 percent
+Coolant Temperature           : 86 degree_Celsius
+Intake Air Temperature        : 43 degree_Celsius
+Mass Air Flow                 : 0.49 gps
+[obd.obd] 'b'010A': Fuel Pressure' is not supported
+Fuel Pressure                 : Not available
+[obd.obd] 'b'0114': O2: Bank 1 - Sensor 1 Voltage' is not supported
+O2 Sensor Bank 1 Sensor 1     : Not available
+Short Term Fuel Trim Bank 1   : 0.0 percent
+Long Term Fuel Trim Bank 1    : -4.6875 percent

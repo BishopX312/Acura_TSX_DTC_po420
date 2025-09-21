@@ -1,0 +1,71 @@
+PS [ADAPTION] >python .\elm327_tsx_PO420.py
+P0420 CATALYST DIAGNOSTIC FOR 2009 ACURA TSX
+============================================================
+============================================================
+P0420 CATALYST EFFICIENCY DIAGNOSTIC
+============================================================
+Code: P0420 - Catalyst System Efficiency Below Threshold
+Location: Bank 1 (Cylinder side with #1 cylinder)
+
+WHAT THIS MEANS:
+- Catalytic converter not cleaning exhaust efficiently
+- Downstream O2 sensor detecting insufficient conversion
+- May cause emissions test failure
+- Usually not drivability issue initially
+
+
+Press Enter to continue with live data analysis...
+
+🔥 ENGINE SHOULD BE RUNNING AND WARMED UP FOR ACCURATE READINGS
+Start engine and let warm up for 5+ minutes, then press Enter...
+============================================================
+OXYGEN SENSOR ANALYSIS
+============================================================
+Reading O2 sensor voltages (engine should be warmed up and running):
+------------------------------------------------------------
+[obd.obd] 'b'0114': O2: Bank 1 - Sensor 1 Voltage' is not supported
+Bank 1 Sensor 1 (Upstream/Pre-Cat) : Not available
+Bank 1 Sensor 2 (Downstream/Post-Cat): 0.13 volt
+Bank 1 Sensor 2 (Downstream/Post-Cat): Error - Cannot compare PlainQuantity and <class 'float'>
+[obd.obd] 'b'0118': O2: Bank 2 - Sensor 1 Voltage' is not supported
+Bank 2 Sensor 1 (Upstream)         : Not available
+[obd.obd] 'b'0119': O2: Bank 2 - Sensor 2 Voltage' is not supported
+Bank 2 Sensor 2 (Downstream)       : Not available
+
+IMPORTANT O2 SENSOR NOTES:
+- Upstream sensors should switch rapidly (0.1V - 0.9V)
+- Downstream sensors should be stable (~0.6-0.8V)
+- If downstream follows upstream closely = bad cat
+
+============================================================
+FUEL TRIM ANALYSIS
+============================================================
+Fuel trim values (+ = adding fuel, - = removing fuel):
+------------------------------------------------------------
+Short Term Fuel Trim Bank 1        : 0.0 percent
+  └─ NORMAL: Within acceptable range
+Long Term Fuel Trim Bank 1         : -1.5625 percent
+  └─ NORMAL: Within acceptable range
+[obd.obd] 'b'0108': Short Term Fuel Trim - Bank 2' is not supported
+[obd.obd] 'b'0109': Long Term Fuel Trim - Bank 2' is not supported
+
+FUEL TRIM INTERPRETATION:
+- Normal range: -10% to +10%
+- High positive: Engine running lean (adding fuel)
+- High negative: Engine running rich (removing fuel)
+- Extreme values can damage catalytic converter
+
+============================================================
+CATALYST TEMPERATURE (if available)
+============================================================
+Traceback (most recent call last):
+  File "C:\OBD2\elm327_tsx_PO420.py", line 225, in <module>
+    main()
+    ~~~~^^
+  File "C:\OBD2\elm327_tsx_PO420.py", line 218, in main
+    read_catalyst_temp(connection)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\OBD2\elm327_tsx_PO420.py", line 137, in read_catalyst_temp
+    if hasattr(obd.commands, cmd_name):
+       ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: attribute name must be string, not 'tuple'	
